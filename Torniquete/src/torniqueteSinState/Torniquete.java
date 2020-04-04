@@ -1,3 +1,5 @@
+package torniqueteSinState;
+
 public class Torniquete implements Bloqueable, Desbloqueable {
     private Estado estado = new Estado(Status.BLOQUEADO);
 

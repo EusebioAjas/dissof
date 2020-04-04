@@ -1,3 +1,5 @@
+package torniqueteSinState;
+
 public class Main {
     public static void main(String[] args) {
         Controlador con = new Controlador();
