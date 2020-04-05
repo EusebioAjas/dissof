@@ -10,12 +10,12 @@ public class TorniqueteBloquear implements IEstadoTorniquete {
 
     @Override
     public void bloquear() {
-        System.out.println("El torniquete ya esta Bloqueado!");
+        System.out.println("¡El torniquete ya esta en BLOQUEADO!");
     }
 
     @Override
     public void desbloquear() {
-        System.out.println("El torniquete esta Desbloqueado!");
+        System.out.println("DESBLOQUEADO");
         torniquete.setEstadoActual(torniquete.getTorniqueteDesbloqueado());
     }
 }

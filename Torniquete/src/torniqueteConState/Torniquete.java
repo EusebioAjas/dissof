@@ -11,7 +11,7 @@ public class Torniquete implements IEstadoTorniquete {
         this.torniqueteBloqueado = new TorniqueteBloquear(this);
         this.torniqueteDesbloqueado = new TorniqueteDesbloquear(this);
 
-        this.estadoActual = this.torniqueteBloqueado;
+        this.estadoActual = this.torniqueteDesbloqueado;
     }
 
     @Override
@@ -28,16 +28,8 @@ public class Torniquete implements IEstadoTorniquete {
         return torniqueteBloqueado;
     }
 
-    public void setTorniqueteBloqueado(IEstadoTorniquete torniqueteBloqueado) {
-        this.torniqueteBloqueado = torniqueteBloqueado;
-    }
-
     public IEstadoTorniquete getTorniqueteDesbloqueado() {
         return torniqueteDesbloqueado;
-    }
-
-    public void setTorniqueteDesbloqueado(IEstadoTorniquete torniqueteDesbloqueado) {
-        this.torniqueteDesbloqueado = torniqueteDesbloqueado;
     }
 
     public IEstadoTorniquete getEstadoActual() {
@@ -47,4 +39,5 @@ public class Torniquete implements IEstadoTorniquete {
     public void setEstadoActual(IEstadoTorniquete estadoActual) {
         this.estadoActual = estadoActual;
     }
+
 }

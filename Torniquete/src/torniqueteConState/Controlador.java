@@ -1,7 +1,5 @@
 package torniqueteConState;
 
-import torniqueteSinState.Status;
-
 import java.util.Scanner;
 
 public class Controlador {
@@ -9,20 +7,16 @@ public class Controlador {
     public void start() {
         Torniquete torniquete = new Torniquete();
         Scanner in = new Scanner(System.in);
-        boolean salir = false;
-        System.out.println(" Estado Actual: " + torniquete.getEstadoActual());
-        while (!salir) {
-            System.out.println("1.- Moneda");
-            System.out.println("2.- Pasar");
-            int valor = in.nextInt();
-            if (valor == 1) {
-                torniquete.desbloquear();
-            } else {
+        int opcion = 1;
+        System.out.print("\nEstado Actual: ");
+        do {
+            if (opcion == 1) {
                 torniquete.bloquear();
+            } else {
+                torniquete.desbloquear();
             }
-
-            System.out.println("Desea salir? SI.- ingrese true | No.- ingrese false ");
-            salir = in.nextBoolean();
-        }
+            System.out.println("\n1.- Pasar" + "\n2.- Poner moneda" + "\n3.- Salir del programa");
+            opcion = in.nextInt();
+        } while (opcion != 3);
     }
 }
