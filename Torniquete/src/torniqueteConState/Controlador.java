@@ -3,9 +3,13 @@ package torniqueteConState;
 import java.util.Scanner;
 
 public class Controlador {
+    private Torniquete torniquete;
+
+    public Controlador() {
+        this.torniquete = new Torniquete();
+    }
 
     public void start() {
-        Torniquete torniquete = new Torniquete();
         Scanner in = new Scanner(System.in);
         int opcion = 1;
         System.out.print("\nEstado Actual: ");
